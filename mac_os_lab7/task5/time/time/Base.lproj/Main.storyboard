@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="time" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Select date, time and count type" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wEk-NI-teD">
+                                <rect key="frame" x="33" y="68" width="349" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7gy-ZG-beq">
+                                <rect key="frame" x="33" y="134" width="349" height="32"/>
+                                <segments>
+                                    <segment title="Days"/>
+                                    <segment title="Minutes"/>
+                                    <segment title="Seconds"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uus-BF-BCl">
+                                <rect key="frame" x="266" y="600" width="116" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Calculate"/>
+                                <connections>
+                                    <action selector="calculateResult:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vbO-i8-03E"/>
+                                    <segue destination="EUa-C1-Kfp" kind="show" id="as6-hi-BZk"/>
+                                </connections>
+                            </button>
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="LKX-UY-InD">
+                                <rect key="frame" x="53" y="173" width="309" height="295"/>
+                            </datePicker>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LKX-UY-InD" firstAttribute="centerX" secondItem="7gy-ZG-beq" secondAttribute="centerX" id="05s-0g-Lq2"/>
+                            <constraint firstItem="LKX-UY-InD" firstAttribute="top" secondItem="7gy-ZG-beq" secondAttribute="bottom" constant="18" id="0ia-BZ-uti"/>
+                            <constraint firstItem="7gy-ZG-beq" firstAttribute="top" secondItem="wEk-NI-teD" secondAttribute="bottom" constant="19" id="3w3-QW-XvI"/>
+                            <constraint firstItem="wEk-NI-teD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="9" id="Q34-sW-Bqw"/>
+                            <constraint firstItem="wEk-NI-teD" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="S05-zj-K6R"/>
+                            <constraint firstItem="7gy-ZG-beq" firstAttribute="centerX" secondItem="wEk-NI-teD" secondAttribute="centerX" id="cZH-Iy-hAD"/>
+                            <constraint firstItem="7gy-ZG-beq" firstAttribute="width" secondItem="wEk-NI-teD" secondAttribute="width" id="q9u-ea-Amc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="LKX-UY-InD" id="lea-pg-bS5"/>
+                        <outlet property="switchOptions" destination="7gy-ZG-beq" id="nGi-bD-Bx0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="67.633928571428569"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="XGU-L0-xbB">
+            <objects>
+                <viewController id="EUa-C1-Kfp" customClass="SecondViewController" customModule="time" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4lA-q2-To3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daE-JV-GMk">
+                                <rect key="frame" x="23" y="680" width="368" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Back"/>
+                                <connections>
+                                    <segue destination="nCk-KH-8sj" kind="unwind" unwindAction="unwindTOMainViewControllerWithUnwindSegue:" id="MuW-du-Ey2"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vzo-PN-NxM">
+                                <rect key="frame" x="86" y="58" width="242" height="105"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="usC-FK-eNv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="B7W-bz-ro6"/>
+                    <connections>
+                        <outlet property="resultLabel" destination="vzo-PN-NxM" id="6AN-88-dJz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ep7-yP-g1P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="nCk-KH-8sj" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1153.6231884057972" y="67.633928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

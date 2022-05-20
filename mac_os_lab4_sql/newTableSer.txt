@@ -1,0 +1,5 @@
+﻿"id"	"surname"	"name"	"patronymic"	"indexPost"	"country"	"region"	"area"	"city"	"street"	"house"	"apartment"	"nationality"	"DOB"	"position"	"rank"	"salary"
+1	"Goncharenko"	"Andrey"	"Dmitrievich"	4356	"Belarus"	"Gomelskai"	"Sovetski"	"Gomel"	"Br.Lizukovih"	8	103	"Belarusian"	12/25/2002	"nachalnik shtaba"	"mayor"	2500
+2	"Krazhevskiy"	"Alex"	"Igorevich"	1209	"Belarus"	"Gomelskai"	"Selmash"	"Gomel"	"Petrova"	12	59	"Belarusian"	12/29/2001	"nachalnik vzvoda"	"sergant"	2300
+4	"Boki"	"Volodia"	"Pavlovic"	7438	"Belarus"	"Minskai"	"Grushevka"	"Minsk"	"Nalibokskaia"	72	19	"Belarusian"	10/17/2002	"PVO"	"leitenant"	2000
+5	"Dashkevich"	"Radion"	"Vladimirovich"	2394	"Belarus"	"Brestskaia"	"Petrovka"	"Brest"	"Peniaskova"	198	18	"Grek"	09/23/2002	"MO"	"ridovoi"	1200

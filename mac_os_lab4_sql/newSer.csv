@@ -1,0 +1,5 @@
+id,surname,name,patronymic,indexPost,country,region,area,city,street,house,apartment,nationality,DOB,position,rank,salary
+1,Goncharenko,Andrey,Dmitrievich,2024867,Belarus,Gomelskaia,Sovetski,Gomel,Br.Lizukovih,8,103,Belarusian,2002-12-25,"nachalnik shtaba",mayor,2500
+2,Kragevski,Alex,Igorevich,2012945,Belarus,Gomelskaia,Selmash,Gomel,Petrova,12,59,Belarusian,2001-12-29,"nachalnik vzvods",segant,2300
+4,Boki,Volodia,Pavlovich,7429406,Belarus,Minskai,Grushevka,Minsk,Nalibokskaia,72,19,Belarusian,2002-10-17,PVO,leitenant,2000
+5,Dashkevich,Radion,Vladimirovich,7593502,Belarus,Brestskaia,Petrovka,Brest,Peniaskova,198,18,Grek,2002-09-23,MO,ridovoi,1200
